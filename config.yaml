@@ -1,0 +1,21 @@
+epochs: 1
+batch_size: 2
+gpu_capacity: 50
+folds: 2
+
+interim_data_dir: data/interim
+train_data: data/interim/train.csv
+
+pipeline:
+  - reshape
+  - pad
+  - resize
+  - as_json
+  - compress
+
+pipe_parameters:
+  init_height: 137
+  init_width: 236
+  padding: 0
+  final_size: 236
+  compression_lvl: 4
